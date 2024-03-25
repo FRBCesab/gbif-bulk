@@ -49,7 +49,7 @@ This project uses the following databases:
 | Database        | Usage                                        | Reference                 | Link   |
 | :-------------- | :------------------------------------------- | :------------------------ | :----: |
 | GBIF            | Get fish occurrences at World scale          | GBIF.org (2024)           | [link](https://www.gbif.org/)    |
-| Natural Earth   | World maps                                   | None                      | [link](https://www.naturalearthdata.com) |
+| Natural Earth   | Create a World grid                          | None                      | [link](https://www.naturalearthdata.com) |
 
 A comprehensive description of all these databases is available [here](https://github.com/frbcesab/gbif-bulk/blob/main/data/README.md).
 
@@ -63,7 +63,7 @@ The analysis pipeline follows these steps:
 2. Download GBIF occurrences
 3. Clean GBIF occurrences
 4. Create a world grid (spatial raster)
-5. Intersect GBIF occurrences w/ the World raster
+5. Intersect GBIF occurrences w/ a World raster
 6. Compute species richness
 7. Compute species range size
 

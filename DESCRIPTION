@@ -1,15 +1,15 @@
 Package: gbif-bulk
 Type: Package
-Title: The Title of the Project
-Version: 0.0.0.9000
+Title: Download and Clean GBIF occurrences
+Version: 0.0.1
 Authors@R: c(
     person(given   = "Nicolas",
            family  = "Casajus",
            role    = c("aut", "cre", "cph"),
            email   = "nicolas.casajus@fondationbiodiversite.fr",
            comment = c(ORCID = "0000-0002-5537-5294")))
-Description: A paragraph providing a full description of the project (on 
-    several lines...)
+Description: Provides an unified workflow to retrieve and clean 'GBIF'
+    occurrences for a given list of species. 
 URL: https://github.com/frbcesab/gbif-bulk
 BugReports: https://github.com/frbcesab/gbif-bulk/issues
 License: GPL (>= 2)

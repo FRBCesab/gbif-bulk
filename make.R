@@ -7,9 +7,9 @@
 #'   - Download GBIF occurrences
 #'   - Clean GBIF occurrences
 #'   - Create a World grid (spatial raster)
-#'   - Intersect GBIF occurrences w/ the World raster
-#'   - Compute species richness
+#'   - Intersect GBIF occurrences w/ a World raster
 #'   - Compute species range size
+#'   - Compute species richness
 #' 
 #' @author Nicolas Casajus \email{nicolas.casajus@fondationbiodiversite.fr}
 #' 
