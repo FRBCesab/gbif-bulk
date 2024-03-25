@@ -13,6 +13,7 @@
 • <a href="#overview">Overview</a><br> • <a href="#data-sources">Data
 sources</a><br> • <a href="#workflow">Workflow</a><br> •
 <a href="#content">Content</a><br> •
+<a href="#prerequisites">Prerequisites</a><br> •
 <a href="#installation">Installation</a><br> •
 <a href="#usage">Usage</a><br> • <a href="#citation">Citation</a><br> •
 <a href="#contributing">Contributing</a><br> •
@@ -82,6 +83,36 @@ This repository is structured as follow:
   contains the outputs of the project. See the
   [`README`](https://github.com/frbcesab/gbif-bulk/blob/main/outputs/README.md)
   for a complete description of the files.
+
+## Prerequisites
+
+### System requirements
+
+This project handles spatial objects with the R packages
+[`sf`](https://r-spatial.github.io/sf/) and
+[`terra`](https://rspatial.github.io/terra/) and require some additional
+software: GDAL, GEOS, and PROJ.
+
+### GBIF account
+
+A GBIF account is required to download GBIF occurrences as ZIP files.
+First, create a GBIF account by visiting this page
+<https://www.gbif.org/user/profile>. Then, store your login information
+locally in the `~/.Renviron` file. Use the function
+`usethis::edit_r_environ()` to create/open this file and add the
+following three lines:
+
+    GBIF_USER='your_username'
+    GBIF_PWD='your_password'
+    GBIF_EMAIL='your_email'
+
+Restart R, and check if everything is ok:
+
+``` r
+Sys.getenv("GBIF_USER")
+Sys.getenv("GBIF_PWD")
+Sys.getenv("GBIF_EMAIL")
+```
 
 ## Installation
 
