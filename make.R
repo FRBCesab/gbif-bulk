@@ -1,8 +1,15 @@
-#' gbif-bulk: A Research Compendium
+#' Set up and run the entire project
 #' 
 #' @description 
-#' A paragraph providing a full description of the project and describing each 
-#' step of the workflow.
+#' Retrieve and clean GBIF Occurrences.
+#' Steps:
+#'   - Find GBIF accepted names & identifiers from a list of taxa names
+#'   - Download GBIF occurrences
+#'   - Clean GBIF occurrences
+#'   - Create a World grid (spatial raster)
+#'   - Intersect GBIF occurrences w/ the World raster
+#'   - Compute species richness
+#'   - Compute species range size
 #' 
 #' @author Nicolas Casajus \email{nicolas.casajus@fondationbiodiversite.fr}
 #' 
@@ -20,12 +27,11 @@ devtools::install_deps(upgrade = "never")
 devtools::load_all(here::here())
 
 
-## Global Variables ----
-
-# You can list global variables here (or in a separate R script)
-
-
 ## Run Project ----
 
-# List all R scripts in a sequential order and using the following form:
-# source(here::here("analyses", "script_X.R"))
+source(here::here("analyses", "retrieve_species_gbif_id.R"))
+source(here::here("analyses", "download_gbif_occurrences.R"))
+source(here::here("analyses", "clean_gbif_occurrences.R"))
+source(here::here("analyses", "intersect_gbif_occurrences.R"))
+source(here::here("analyses", "compute_species_richness.R"))
+source(here::here("analyses", "compute_species_rangesize.R"))
