@@ -30,6 +30,8 @@ grd <- terra::project(grd, crs_eckert_iv())
 downloads_info <- read.csv(here::here("data", "gbif", "gbif_requests_keys.csv"))
 
 
+occs_on_cells <- list()
+
 for (i in 1:nrow(downloads_info)) {
   
   cat(paste0("Rasterize GBIF file - ", i, "\r"))
@@ -59,7 +61,7 @@ for (i in 1:nrow(downloads_info)) {
   
   ## Intersect GBIF occurrences w/ grid cells ----
   
-  occs_on_cells <- parallel::mclapply(species, function(x) {
+  cells <- parallel::mclapply(species, function(x) {
     
     sp_distr <- occ[occ$"gbif_key" == x, ]
     
@@ -67,12 +69,13 @@ for (i in 1:nrow(downloads_info)) {
     
   }, mc.cores = n_cores)
   
-  names(occs_on_cells) <- species
+  names(cells) <- species
   
+  occs_on_cells <- c(occs_on_cells, cells)
 }
 
 
 ## Export table ----
 
-saveRDS(species_ecoregions, here::here("outputs", 
-                                       "gbif_occurrences_on_gridcells.rds"))
+saveRDS(occs_on_cells, here::here("outputs", 
+                                  "gbif_occurrences_on_gridcells.rds"))
