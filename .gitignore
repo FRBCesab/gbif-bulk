@@ -21,3 +21,7 @@ README.html
 inst/doc
 man/
 NAMESPACE
+data/gbif/*
+
+# Exception ----
+!data/gbif/gbif_requests_keys.csv
