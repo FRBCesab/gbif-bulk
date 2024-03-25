@@ -32,10 +32,10 @@ cells) and species richness.
 
 This project uses the following databases:
 
-| Database      | Usage                               | Reference       |                   Link                   |
-|:--------------|:------------------------------------|:----------------|:----------------------------------------:|
-| GBIF          | Get fish occurrences at World scale | GBIF.org (2024) |      [link](https://www.gbif.org/)       |
-| Natural Earth | Create a World grid                 | None            | [link](https://www.naturalearthdata.com) |
+| Database      | Usage                          | Reference       |                   Link                   |
+|:--------------|:-------------------------------|:----------------|:----------------------------------------:|
+| GBIF          | Get occurrences at World scale | GBIF.org (2024) |      [link](https://www.gbif.org/)       |
+| Natural Earth | Create a World grid            | None            | [link](https://www.naturalearthdata.com) |
 
 A comprehensive description of all these databases is available
 [here](https://github.com/frbcesab/gbif-bulk/blob/main/data/README.md).
