@@ -24,7 +24,8 @@ sources</a><br> • <a href="#workflow">Workflow</a><br> •
 
 This project aims to provide an unified workflow to retrieve and clean
 GBIF occurrences for a given list of species. Occurrences are finally
-aggregated on a World grid (resolution can be set by user).
+aggregated on a World grid to compute species range sizes (number of
+cells) and species richness.
 
 ## Data sources
 
@@ -47,8 +48,8 @@ The analysis pipeline follows these steps:
 3.  Clean GBIF occurrences
 4.  Create a world grid (spatial raster)
 5.  Intersect GBIF occurrences w/ a World raster
-6.  Compute species richness
-7.  Compute species range size
+6.  Compute species range size
+7.  Compute species richness
 
 ## Content
 
@@ -81,9 +82,6 @@ This repository is structured as follow:
   contains the outputs of the project. See the
   [`README`](https://github.com/frbcesab/gbif-bulk/blob/main/outputs/README.md)
   for a complete description of the files.
-
-- [`figures/`](https://github.com/frbcesab/gbif-bulk/blob/main/figures):
-  contains the figures used to validate et visualize the outputs.
 
 ## Installation
 
@@ -147,4 +145,4 @@ groups](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-p
 ## References
 
 GBIF.org (2024) GBIF Home Page. Available from: <https://www.gbif.org>
-\[17 February 2024\].
+\[25 March 2024\].

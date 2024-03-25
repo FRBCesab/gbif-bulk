@@ -5,7 +5,7 @@
 A table containing at least one column named `species_name` that will be used to download GBIF occurrences. Note that the code will first check if the provided names are accepted names in the GBIF system. The code will download GBIF occurrences for the GBIF accepted names (including all synonyms).
 
 ```r
-splist <- read.csv(here::here("data", "species_list.csv"))
+species_list <- read.csv(here::here("data", "species_list.csv"))
 ```
 
 

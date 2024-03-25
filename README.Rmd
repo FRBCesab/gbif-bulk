@@ -39,7 +39,8 @@ knitr::opts_chunk$set(collapse  = TRUE,
 
 ## Overview
 
-This project aims to provide an unified workflow to retrieve and clean GBIF occurrences for a given list of species. Occurrences are finally aggregated on a World grid (resolution can be set by user).
+This project aims to provide an unified workflow to retrieve and clean GBIF occurrences for a given list of species. Occurrences are finally aggregated on a World grid to compute species range sizes (number of cells) and species richness.
+
 
 
 ## Data sources
@@ -64,8 +65,8 @@ The analysis pipeline follows these steps:
 3. Clean GBIF occurrences
 4. Create a world grid (spatial raster)
 5. Intersect GBIF occurrences w/ a World raster
-6. Compute species richness
-7. Compute species range size
+6. Compute species range size
+7. Compute species richness
 
 
 ## Content
@@ -83,8 +84,6 @@ This repository is structured as follow:
 - [`analyses/`](https://github.com/frbcesab/gbif-bulk/blob/main/analyses): contains R scripts to run the workflow. The order to run these scripts is explained in the [`make.R`](https://github.com/frbcesab/gbif-bulk/blob/main/make.R) and the description of each script is available in the header of each file.
 
 - [`outputs/`](https://github.com/frbcesab/gbif-bulk/blob/main/outputs): contains the outputs of the project. See the [`README`](https://github.com/frbcesab/gbif-bulk/blob/main/outputs/README.md) for a complete description of the files.
-
-- [`figures/`](https://github.com/frbcesab/gbif-bulk/blob/main/figures): contains the figures used to validate et visualize the outputs.
 
 
 
@@ -148,4 +147,4 @@ This project has been developed for
 
 ## References
 
-GBIF.org (2024) GBIF Home Page. Available from: <https://www.gbif.org> [17 February 2024].
+GBIF.org (2024) GBIF Home Page. Available from: <https://www.gbif.org> [25 March 2024].
